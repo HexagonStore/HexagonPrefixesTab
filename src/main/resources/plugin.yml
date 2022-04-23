@@ -1,0 +1,5 @@
+name: HexagonPrefixesTab
+version: '${version}'
+main: hexagonstore.prefixestab.PrefixesPlugin
+softdepend: [ PlaceholderAPI ]
+author: sailez_
