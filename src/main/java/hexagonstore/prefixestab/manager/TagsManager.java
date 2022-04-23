@@ -28,10 +28,10 @@ public class TagsManager {
 
     public void applyTag(Player player) {
         switch (hooker.getHookerType()) {
-            case HookerType.LP:
+            case LP:
                 applyLP(player);
                 break;
-            case HookerType.PEX:
+            case PEX:
                 applyPex(player);
                 break;
         }
