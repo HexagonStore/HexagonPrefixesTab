@@ -69,7 +69,7 @@ public class TagsManager {
         Scoreboard scoreboard = player.getScoreboard();
         if (scoreboard == Bukkit.getScoreboardManager().getMainScoreboard()) {
             scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
-            player.setScoreboard(scoreboard);
+            for (Player online : Bukkit.getOnlinePlayers()) online.setScoreboard(scoreboard);
         }
 
         String prefix = tag.getPrefix().replace("&", "§");
