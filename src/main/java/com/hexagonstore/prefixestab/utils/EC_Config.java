@@ -1,4 +1,4 @@
-package hexagonstore.prefixestab.utils;
+package com.hexagonstore.prefixestab.utils;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;

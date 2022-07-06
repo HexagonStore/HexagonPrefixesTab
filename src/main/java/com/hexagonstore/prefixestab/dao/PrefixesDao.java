@@ -1,7 +1,7 @@
-package hexagonstore.prefixestab.dao;
+package com.hexagonstore.prefixestab.dao;
 
-import hexagonstore.prefixestab.models.Tag;
-import hexagonstore.prefixestab.utils.EC_Config;
+import com.hexagonstore.prefixestab.models.Prefixe;
+import com.hexagonstore.prefixestab.utils.EC_Config;
 import lombok.Getter;
 import lombok.val;
 import org.bukkit.Bukkit;
@@ -10,12 +10,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Getter
-public class TagsDao {
+public class PrefixesDao {
 
-    private Map<String, Tag> tags;
+    private Map<String, Prefixe> prefixes;
+    private Prefixe defaultTag;
 
-    public TagsDao(EC_Config config) {
-        tags = new HashMap<>();
+    public PrefixesDao(EC_Config config) {
+        prefixes = new HashMap<>();
         load(config);
     }
 
@@ -30,13 +31,14 @@ public class TagsDao {
                 val suffix = key.getString("suffix");
                 val position = String.valueOf(key.getInt("position"));
 
-                val tag = new Tag(id, groupID, prefix, suffix, position);
-                tags.put(groupID.toLowerCase(), tag);
+                val tag = new Prefixe(id, groupID, prefix, suffix, position);
+                prefixes.put(groupID.toLowerCase(), tag);
             }
+            defaultTag = prefixes.get(config.getString("Defaults.tag"));
         }else Bukkit.getConsoleSender().sendMessage("§4[HexagonPrefixesTab] §cSection 'Tags' não encontrada, contate o desenvolvedor do plugin.");
     }
 
-    public Tag getTag(String id) {
-        return tags.get(id.toLowerCase());
+    public Prefixe getTag(String id) {
+        return prefixes.get(id.toLowerCase());
     }
 }

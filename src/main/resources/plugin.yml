@@ -1,5 +1,7 @@
 name: HexagonPrefixesTab
 version: '${version}'
-main: hexagonstore.prefixestab.PrefixesPlugin
-softdepend: [ PlaceholderAPI ]
+main: com.hexagonstore.prefixestab.PrefixesPlugin
+softdepend: [PlaceholderAPI, LuckPerms, PermissionsEx]
 author: sailez_
+description: Um plugin simples de prefixos no tab com suporte a PlaceholderAPI.
+website: https://dsc.gg/hexagonstore

@@ -1,11 +1,11 @@
 Tags:
-  membro:
-    group_id: 'default' #Esta opção deve ser igual ao id do grupo de seu plugin de permissões (LuckPerms ou PermissionsEx);
-    prefix: '&8[Membro] &7' #Prefixo no tab;
-    suffix: '' #Sufixo no tab; use placeholders aqui para: clans, money e etc...;
-    position: 1 #Crescente (Do menor para o maior);
   dono:
     group_id: 'master' #Esta opção deve ser igual ao id do grupo de seu plugin de permissões (LuckPerms ou PermissionsEx);
     prefix: '&6[Master] &f' #Prefixo no tab;
     suffix: '' #Sufixo no tab; use placeholders aqui para: clans, money e etc...;
-    position: 2 #Crescente (Do menor para o maior);
+    position: 1 #Decrescente (Do maior pro menor)
+  membro:
+    group_id: 'default' #Esta opção deve ser igual ao id do grupo de seu plugin de permissões (LuckPerms ou PermissionsEx);
+    prefix: '&8[Membro] &7' #Prefixo no tab;
+    suffix: '' #Sufixo no tab; use placeholders aqui para: clans, money e etc...;
+    position: 2 #Decrescente (Do maior pro menor)
